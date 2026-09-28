@@ -1,0 +1,26 @@
+# Python environments and generated files
+.venv/
+backend/.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Node dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Local configuration and secrets
+.env
+backend/.env
+*.pem
+*.key
+
+# Local database and runtime files
+*.db
+*.sqlite
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/

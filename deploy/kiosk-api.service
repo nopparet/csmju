@@ -1,0 +1,14 @@
+[Unit]
+Description=Smart Kiosk API (FastAPI)
+After=network.target mysql.service
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/smart-kiosk/backend
+Environment="PATH=/home/pi/smart-kiosk/backend/.venv/bin"
+ExecStart=/home/pi/smart-kiosk/backend/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
